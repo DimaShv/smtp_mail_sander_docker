@@ -4,8 +4,7 @@ VOLUME /home/user/projects/dependencies-backend:/root/.m2
 WORKDIR /tmp
 COPY . /tmp
 
-RUN chmod +x gradlew
-RUN ./gradlew clean build
+RUN chmod +x gradlew && ./gradlew clean build
 
 FROM openjdk:8-jre-alpine
 
